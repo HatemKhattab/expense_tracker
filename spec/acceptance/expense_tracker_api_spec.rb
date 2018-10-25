@@ -4,6 +4,11 @@ require 'json'
 module ExpenseTracker
   RSpec.describe 'Expense Tracker API' do
     include Rack::Test::Methods
+
+    def app
+      ExpenseTracker::API.new
+    end
+    
     it 'record submitted expenses' do
       coffe = {
         'payee' => 'Starbucks',
