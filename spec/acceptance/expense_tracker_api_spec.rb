@@ -1,5 +1,6 @@
 require 'rack/test'
 require 'json'
+require_relative '../../app/api'
 
 module ExpenseTracker
   RSpec.describe 'Expense Tracker API' do
@@ -8,7 +9,7 @@ module ExpenseTracker
     def app
       ExpenseTracker::API.new
     end
-    
+
     it 'record submitted expenses' do
       coffe = {
         'payee' => 'Starbucks',
@@ -16,6 +17,10 @@ module ExpenseTracker
         'date' => '2017-06-10'
       }
       post '/expenses', JSON.generate(coffe)
+      expect(last_response.status).to eq(200)
+
+      parsed = JSON.parse(last_response.body)
+      expect(parsed).to include('expense_id' => a_kind_of(Integer))
     end
   end
 end
