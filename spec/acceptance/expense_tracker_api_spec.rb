@@ -1,5 +1,6 @@
 require 'rack/test'
 require 'json'
+require 'pry'
 require_relative '../../app/api'
 
 module ExpenseTracker
