@@ -8,7 +8,7 @@ module ExpenseTracker
 
       context 'when the expense fails validation' do
         it 'return an error message'
-        it 'responds with a 422 (Unprocessable entity) '
+        it 'responds with a 422 (Unprocessable entity)'
       end
     end
   end
