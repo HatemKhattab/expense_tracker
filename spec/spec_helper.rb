@@ -14,6 +14,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'rack/test'
+require_relative '../app/api.rb'
+
 ENV['RACK_ENV'] = 'test' # To avoid sinatra to render 500 Internal server error
 
 RSpec.configure do |config|
