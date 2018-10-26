@@ -5,7 +5,11 @@ module ExpenseTracker
         it 'returns the expense id'
         it 'responds with a 200 (OK)'
       end
-      # .. next context will go here
+
+      contex 'when the expense fails validation' do
+        it 'return an error message'
+        it 'responds with a 422 (Unprocessable entity)'
+      end
     end
   end
 end
