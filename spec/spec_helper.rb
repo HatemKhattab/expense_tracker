@@ -24,6 +24,10 @@ RSpec.configure do |config|
   # assertions if you prefer.
   config.include Rack::Test::Methods
 
+  config.when_first_matching_example_defined(:db) do
+    require_relative 'support/db'
+  end
+
   # To avoid showing gem backtrace if spec fails
   config.filter_gems_from_backtrace 'rack', 'rack-test', 'sequel', 'sinatra'
 
