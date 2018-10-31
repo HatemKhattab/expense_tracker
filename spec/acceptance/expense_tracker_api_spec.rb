@@ -4,7 +4,7 @@ require 'pry'
 require_relative '../../app/api'
 
 module ExpenseTracker
-  RSpec.describe 'Expense Tracker API' do
+  RSpec.describe 'Expense Tracker API', :db do
 
     def app
       ExpenseTracker::API.new
