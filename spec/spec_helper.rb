@@ -24,8 +24,17 @@ RSpec.configure do |config|
   # assertions if you prefer.
   config.include Rack::Test::Methods
 
+  #to clean the database before and after each test
   config.when_first_matching_example_defined(:db) do
     require_relative 'support/db'
+  end
+
+  # add new aliases pdescribe and pit to call binding.pry
+  config.alias_example_group_to :pdescribe, pry: true
+  config.alias_example_to :pit, pry: true
+  config.after(:example, pry: true) do |ex|
+    require 'pry'
+    binding.pry
   end
 
   # To avoid showing gem backtrace if spec fails
