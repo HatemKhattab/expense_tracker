@@ -8,3 +8,4 @@ gem 'pry'
 gem 'guard-rspec', require: false
 gem 'sequel', '4.48.0'
 gem 'sqlite3', '1.3.13'
+gem 'rake'
