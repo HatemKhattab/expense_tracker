@@ -18,7 +18,7 @@ module ExpenseTracker
       end
 
       context 'when the expense is successfully recorded' do
-        let(:expense){{'some' => 'data'}}
+        let(:expense){{ 'some' => 'data' }}
         before do
           allow(ledger).to receive(:record)
             .with(expense)
