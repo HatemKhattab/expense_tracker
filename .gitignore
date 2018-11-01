@@ -1,3 +1,4 @@
 spec/spec_result.txt
 db/test.db
 db/test.db-journal
+db/development.db
