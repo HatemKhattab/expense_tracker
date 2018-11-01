@@ -1,4 +1,4 @@
-# Expense Tracker
+# Expense Tracker [![Build Status](https://travis-ci.org/HatemKhattab/expense_tracker.svg?branch=master)](https://travis-ci.org/HatemKhattab/expense_tracker)
 Web service to store and get expenses
 
 ## setup
