@@ -1,2 +1,2 @@
 spec/spec_result.txt
-db/*
+db/*.db
